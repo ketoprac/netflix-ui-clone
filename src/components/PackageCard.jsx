@@ -3,7 +3,7 @@ import ChecklistItem from "./CheckListItem";
 const PackageCard = ({ title, price }) => {
   return (
     <div className="bg-[#1F2127] font-body rounded-[30px] py-9 px-6 w-[400px] flex flex-col items-center">
-      <h3 className="text-newWhite font-semibold text-center mb-6">{title}</h3>
+      <p className="text-newWhite font-semibold text-center mb-6">{title}</p>
       <h3 className="text-center font-semibold text-3xl text-[#DB202C] mb-6">
         Rp {price.toLocaleString()}
         <span className="text-base font-normal text-newWhite">/bulan</span>

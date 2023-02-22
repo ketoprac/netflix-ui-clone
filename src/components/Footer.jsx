@@ -48,9 +48,9 @@ const Footer = () => {
         </div>
         {footerLinks.map((linkGroup) => (
           <div key={linkGroup.title}>
-            <h3 className="text-newWhite font-semibold text-lg mb-3 lg:mb-6">
+            <p className="text-newWhite font-semibold text-lg mb-3 lg:mb-6">
               {linkGroup.title}
-            </h3>
+            </p>
             <div className="text-[#E3E0E0] flex flex-col gap-y-2">
               {linkGroup.links.map((link) => (
                 <a key={link.text} href={link.url}>
