@@ -87,8 +87,18 @@ const Footer = () => {
       </div>
       <div className="flex justify-between flex-col-reverse lg:flex-row text-center lg:text-left gap-y-3 font-light text-white text-sm pb-12">
         <div className="flex-1">
-          © 2022 Hak Cipta Terpelihara oleh Netflix Indonesia<br/>
-          Design by <a href="https://www.figma.com/@muhammadfauzana" target="_blank">Muhammad Fauzan Alkhairi</a> | Coded by <a href="https://linkedin.com/in/hafiedzmada" target="_blank">Hafiedz Mada</a>
+          <p>© 2022 Hak Cipta Terpelihara oleh Netflix Indonesia</p>
+          <br />
+          <p>
+            Design by{" "}
+            <a href="https://www.figma.com/@muhammadfauzana" target="_blank">
+              Muhammad Fauzan Alkhairi
+            </a>{" "}
+            | Coded by{" "}
+            <a href="https://linkedin.com/in/hafiedzmada" target="_blank">
+              Hafiedz Mada
+            </a>
+          </p>
         </div>
         <a href="#" className="mr-2">
           Persyaratan Pelayanan

@@ -30,9 +30,9 @@ const services = [
 const ServiceSection = () => {
   return (
     <div className="mb-[180px]">
-      <h1 className="font-title text-newWhite text-[40px] mb-4 text-center">
+      <h1 className="font-title text-newWhite lg:text-4xl text-3xl mb-4 text-center">
         Layanan Terbaik yang
-        <br className="hidden lg:block"/> Tidak Mengecewakan
+        <br className="hidden lg:block"/>{" "}Tidak Mengecewakan
       </h1>
       <div className="font-body flex md:gap-x-10 gap-y-6 items-center justify-center md:flex-col lg:flex-row flex-col">
         {services.map((service) => (

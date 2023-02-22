@@ -1,8 +1,10 @@
 import ChecklistItem from "./CheckListItem";
+import { motion } from "framer-motion";
 
 const PackageCard = ({ title, price }) => {
   return (
-    <div className="bg-[#1F2127] font-body rounded-[30px] py-9 px-6 w-[400px] flex flex-col items-center">
+    <motion.div initial={{ scale: 0.5 }}
+    whileInView={{ scale: 1 }} className="bg-[#1F2127] font-body rounded-[30px] py-9 px-6 lg:w-[400px] md:w-[360px] w-[300px] flex flex-col items-center">
       <p className="text-newWhite font-semibold text-center mb-6">{title}</p>
       <h3 className="text-center font-semibold text-3xl text-[#DB202C] mb-6">
         Rp {price.toLocaleString()}
@@ -21,7 +23,7 @@ const PackageCard = ({ title, price }) => {
       <button className="border border-newWhite rounded-2xl py-2 px-7 text-newWhite font-semibold w-[150px]">
         Pilih Paket
       </button>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,6 +4,7 @@ import { ReactComponent as HamburgerIcon } from "../assets/icon/hamburger.svg";
 import { ReactComponent as CloseIcon } from "../assets/icon/close.svg";
 import { useState } from "react";
 import { ReactComponent as ChevronDownIcon } from "../assets/icon/chevron-down.svg";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const menuLinks = [
@@ -30,15 +31,15 @@ const Navbar = () => {
         </div>
         <Button>Masuk</Button>
       </div>
-      <div className="block md:hidden">
+      <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.6}} className="block md:hidden">
         {showNavbar ? 
           <CloseIcon onClick={() => setShowNavbar(false)} /> :
           <HamburgerIcon onClick={() => setShowNavbar(true)} />
         }
-      </div>
+      </motion.div>
     </nav>
         {showNavbar && (
-          <div className="bg-dark font-body text-newWhite p-6 flex flex-col gap-y-3">
+          <motion.div animate={{y: 0, scale: 1}} initial={{y: -50, scale: 0.8}} className="bg-dark font-body text-newWhite px-3 pb-6 flex flex-col gap-y-3">
                 <div className="gap-y-3 flex flex-col md:hidden">
                 {menuLinks.map(({ text, href }) => (
                   <a key={text} href={href}>
@@ -50,7 +51,7 @@ const Navbar = () => {
                      <p>ID | EN</p>
                     <Button>Masuk</Button>
                   </div>
-                  </div>
+                  </motion.div>
         )}
         </>
   );

@@ -1,8 +1,9 @@
 import star from "../assets/icon/star.svg";
+import { motion } from "framer-motion";
 
 const MovieCard = ({ imageUrl, title, categories, rating }) => {
   return (
-    <div className="text-newWhite font-body flex flex-col justify-between gap-y-1 rounded-3xl border border-[#FEF4F499] p-6 w-[290px] h-[350px]">
+    <motion.div whileHover={{y: -10}} className="text-newWhite font-body flex flex-col justify-between gap-y-1 rounded-3xl border border-[#FEF4F499] p-6 w-[290px] h-[350px]">
       <img className="mb-4 " src={imageUrl} alt={title} />
       <a href="#" className="text-lg font-medium mb-1">
         {title}
@@ -12,7 +13,7 @@ const MovieCard = ({ imageUrl, title, categories, rating }) => {
         <img src={star} alt="star" />
         <p className="font-light text-sm">{rating}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
